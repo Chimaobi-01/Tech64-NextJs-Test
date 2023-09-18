@@ -1,0 +1,290 @@
+html {
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main {
+    background-color: rgb(236, 238, 238);
+    padding: 2rem;
+    height: 100%;
+    width: 100%;
+}
+.container {
+    border-radius: .5rem;
+    box-shadow: 0px 0px 1px rgba(45, 55, 72, 0.05), 0px 2px 4px rgba(45, 55, 72, 0.1);
+    background-color: white;
+}
+header {
+    padding: 1.25rem 1.5rem 0;
+    display: flex;
+    /* inner-container */
+    justify-content: space-between;
+    gap: .5rem;
+    /* text */
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+}
+.search-flex {
+    width: 100%;
+    max-width: 20rem;
+    position: relative;
+    display: flex;
+}
+.search-icon {
+    font-size: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    display: inline-block;
+    line-height: 1rem;
+}
+.search-flex input {
+    position: relative;
+    width: 100%;
+    height: 2.5rem;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    padding: 0 .75rem 0 2.5rem;
+    border-radius: .5rem;
+    border: 1px solid gray;
+    font-size: 1rem;
+}
+.search-flex input:hover, .search-flex input:focus {
+    border-color: rgb(76, 71, 128);
+}
+/* table */
+table {
+    white-space: nowrap;
+    width: 100%;
+   
+}
+table thead tr th {
+    border-top: 1px solid;
+    border-color: #edf2f7;
+    background-color: #f4f8fa;
+    line-height: 1.25rem;
+    font-size: .75rem;
+    color: gray;
+    padding: .75rem 1.5rem;
+    text-align: start;
+}
+.thOne {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+.checkbox {
+    position: relative;
+    width: .975rem;
+    height: .975rem;
+}
+.checkbox input {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.checkbox span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 1px solid gray;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+.thOne div {
+    display: flex;
+    gap: .25rem;
+    align-items: center;
+}
+.thOne div i {
+    width: 1rem;
+    height: 1rem;
+}
+table tbody tr td {
+    text-align: start;
+    padding: 1rem 1.5rem;
+    line-height: 1.25rem;
+    font-size: .875rem;
+    border: 0px solid #edf2f7;
+    border-top-width: 1px;
+}
+.tdOne {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+.tdOne .img {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    position: relative;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+.tdOne .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+    border-style: none;
+}
+.tdOne .user-detail p {
+    font-weight: 600;
+}
+.tdOne .user-detail span {
+    color: gray;
+}
+.rating ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: .125rem;
+}
+.rating ul li {
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+    font-size: 1.25rem;
+    color: #3182ce;
+}
+.edit-users {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.edit-users button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    position: relative;
+    outline: transparent solid 2px;
+    outline-offset: 2px;
+    color: gray;
+    font-weight: 600;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+}
+.edit-users button svg {
+    font-size: 1.25rem;
+}
+.center {
+    display: flex;
+    justify-content: center;
+}
+footer {
+    padding: 1.25rem 1.5rem;
+}
+footer .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .75rem;
+}
+.footer div {
+    display: inline-flex;
+    justify-content: space-between;
+    gap: .75rem;
+}
+.footer div button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5rem;
+    font-weight: 600;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    padding: 0 1rem;
+    color: gray;
+}
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(45, 55, 72, 0.5);
+    z-index: 10;
+}
+.modal-content {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: .75rem;
+}
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.modal-header span {
+    font-size: 1.5rem;
+    padding: .25rem .5rem;
+    border-radius: .25rem;
+}
+.modal-header span:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.edit-form label {
+    display: flex;
+    flex-direction: column;
+}
+.edit-form input {
+    padding: .5rem;
+    border: none;
+    background-color: lightgray;
+    border-radius: .25rem;
+}
+.edit-form .user {
+    display: flex;
+    gap: .75rem;
+}
+.save-btn {
+    text-align: end;
+    margin-top: 1rem;
+}
+.save-btn input {
+    display: inline-block;
+    padding: .5rem 1rem;
+}
+.save-btn input:hover {
+    background-color: gray;
+    cursor: pointer;
+}
+
+.overflow {
+    overflow-x: auto;
+}
+
+
+
+
+
