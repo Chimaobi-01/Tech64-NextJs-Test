@@ -12,7 +12,7 @@ export default function Tbody({ search, records, deleteUserDetails, bundleHandle
             return (
               search.toLowerCase() === ''
               ? item
-              : item.name.toLocaleLowerCase().includes(search)
+              : item.name.toLocaleLowerCase().includes(search.toLowerCase())
             )
           }).map((item) => <tr key={item.id} >
             <TableRow 
