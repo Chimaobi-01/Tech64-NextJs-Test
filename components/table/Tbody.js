@@ -1,7 +1,9 @@
 import TableRow from "../mini-components/TableRow";
 
 
-export default function Tbody({ search, records, deleteUserDetails, bundleHandlers }) {
+export default function Tbody({ search, records, deleteUserDetails, bundleHandlers, checkbox, handleCheckbox }) {
+
+
 
   return (
     <tbody>
@@ -12,8 +14,13 @@ export default function Tbody({ search, records, deleteUserDetails, bundleHandle
               ? item
               : item.name.toLocaleLowerCase().includes(search)
             )
-          }).map((item) => <tr key={item.id}>
-            <TableRow deleteUserDetails={deleteUserDetails} bundleHandlers={bundleHandlers} item={item} />
+          }).map((item) => <tr key={item.id} >
+            <TableRow 
+            handleCheckbox={handleCheckbox}
+            checkbox={checkbox}
+            deleteUserDetails={deleteUserDetails} 
+            bundleHandlers={bundleHandlers} 
+            item={item} />
             </tr>)
         }
   </tbody>

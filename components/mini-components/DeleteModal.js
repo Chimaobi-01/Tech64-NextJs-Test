@@ -1,25 +1,31 @@
 
 
 export default function DeleteModal({ closeDeleteModal, item, deleteUserDetails, }) {
-    const del = {
-        backgroundColor: 'rgb(218, 93, 93)',
-        color: 'white',
-        border: 'none',
-        borderRadius: '.25rem',
-        fontWeight: 'bold'
+    const style = {
+        del: {
+            backgroundColor: 'rgb(218, 93, 93)',
+            color: 'white',
+            border: 'none',
+            borderRadius: '.25rem',
+            fontWeight: 'bold'
+        },
+        h3: {
+           
+        }
     }
    
     return (
         <>
             <div className="modal-header">
-                <h3>Delete User Profile</h3>
-                <span onClick={closeDeleteModal}>&times;</span>
+            <span onClick={closeDeleteModal}>&times;</span>
+                <h3 style={style.h3}>You're about to delete {item.name} </h3>
+                
             </div>
             <div className="save-btn">
                     <input onClick={() => {
                         deleteUserDetails(item.id)
                         closeDeleteModal()
-                        }} type="submit" value='Delete' style={del} />
+                        }} type="submit" value='Delete' style={style.del} />
                 </div>
         </>
     )

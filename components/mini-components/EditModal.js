@@ -13,11 +13,11 @@ const { handleEmail, handleName, handleRole, handleUsername, editUserDetails} = 
             </div>
             <div className="edit-form">
                 <div className="user">
-                    <label>Name<input onChange={handleName} type="text" /></label>
-                    <label>Username<input onChange={handleUsername} type="text" /></label>
+                    <label>Name<input value={item.name} onChange={handleName} type="text" /></label>
+                    <label>Username<input value={item.username} onChange={handleUsername} type="text" /></label>
                 </div>
-                <label>Email<input onChange={handleEmail} type="email" /></label>
-                <label>Role<input onChange={handleRole} type="text" /></label>
+                <label>Email<input value={item.email} onChange={handleEmail} type="email" /></label>
+                <label>Role<input  value={item.company.bs} onChange={handleRole} type="text" /></label>
                 <div className="save-btn">
                     <input onClick={() => {
                         closeModal()

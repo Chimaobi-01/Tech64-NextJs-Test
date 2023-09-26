@@ -1,11 +1,17 @@
 
 
-export default function Thead() {
+export default function Thead({ selectAllCheckbox, handleSelectAllCheckbox }) {
   return (
     <thead>
       <tr>
         <th className="thOne">
-          <label className="checkbox"><input type="checkbox" /> <span></span></label>
+          <label className="checkbox">
+            <input
+              checked={selectAllCheckbox}
+              onChange={handleSelectAllCheckbox}
+             type="checkbox" />
+            <span></span>
+          </label>
 
           <div>
             <span>Name</span>
