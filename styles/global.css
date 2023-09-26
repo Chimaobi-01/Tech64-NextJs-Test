@@ -249,6 +249,9 @@ footer .footer {
     align-self: self-end;
     
 }
+.modal-header .h3 {
+    text-align: center;
+}
 .modal-header span:hover {
     color: gray;
     cursor: pointer;
