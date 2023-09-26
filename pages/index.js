@@ -1,5 +1,6 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import ErrorMessage from "@/components/mini-components/ErrorMessage";
 import Loading from "@/components/mini-components/Loading";
 import Table from "@/components/table/Table";
 import { useState } from "react";
@@ -45,7 +46,7 @@ export default function Home() {
   }
   const { data, error } = useSWR('data', fetcher)
   
-  if (error) return 'An error occured. check your internet settings and try again'
+  if (error) return <ErrorMessage />
   if (!data) return <Loading />
 
  
